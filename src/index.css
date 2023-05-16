@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+.table {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+
+.table p {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.table .item {
+  display: flex;
+  border: 1px solid black;
+}
+
+.id, .name , .desc, .creator {
+  padding: 10px;
+}
+
+.table .id {
+  width: 90px;
+}
+
+.table .name {
+  width: 100px;
+  text-align: left;
+}
+
+.table .desc {
+  width: 200px;
+  text-align: left;
+}
+
+.table .creator {
+  width: 150px;
+}

@@ -64,3 +64,30 @@
 .table .creator {
   width: 150px;
 }
+
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 10px;
+}
+
+.create label,
+.create button {
+  align-self: flex-start;
+}
+
+.create input {
+  width: 300px;
+  height: 40px;
+  margin: 10px 0;
+}

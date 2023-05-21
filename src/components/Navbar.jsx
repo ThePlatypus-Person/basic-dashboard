@@ -1,19 +1,22 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [userName, setUserName] = useState("Bob");
 
   return (
     <div className="navbar">
-      <div className="logo">
-        Very Cool Logo
-      </div>
+      <Link to="/" className="link">
+        <div className="logo">
+          Very Cool Logo
+        </div>
+      </Link>
 
       <div className="links">
         <p className="welcome">{`Welcome, ${userName}`}</p>
 
-        <button className="settings">Settings</button>
-        <button className="sign-out">Sign Out</button>
+        <Link to="/create" className="new-item">New Item</Link>
+        <Link className="sign-out">Sign Out</Link>
       </div>
 
     </div>

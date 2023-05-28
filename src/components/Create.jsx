@@ -4,20 +4,20 @@ import { useNavigate } from "react-router-dom";
 const Create = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [creator, setCreator] = useState('');
+  const [creator, setCreator] = useState(sessionStorage.getItem("userName"));
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const item = { name, description, creator };
 
-    fetch('http://localhost:3001/items', {
-      method: 'POST',
+    fetch("http://localhost:3001/items", {
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(item)
     }).then(() => {
-      navigate('/');
-    })
+      navigate("/main");
+    });
   }
 
   return (
@@ -34,8 +34,7 @@ const Create = () => {
           onChange={(e) => setDescription(e.target.value)} />
 
         <label>Item Creator:</label>
-        <input type="text" required value={creator}
-          onChange={(e) => setCreator(e.target.value)} />
+        <div className="creator">{ creator }</div>
 
         <button>Add new item</button>
       </form>

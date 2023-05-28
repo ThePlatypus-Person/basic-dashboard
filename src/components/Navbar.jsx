@@ -1,8 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [userName, setUserName] = useState("Bob");
+  const [userName, setUserName] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setUserName(sessionStorage.getItem("userName"));
+  }, [sessionStorage.getItem("userName")]);
+
+  const handleSignOut = () => {
+    sessionStorage.clear();
+    navigate("/login");
+  }
 
   return (
     <div className="navbar">
@@ -11,13 +21,16 @@ const Navbar = () => {
           Very Cool Logo
         </div>
       </Link>
+      { userName === "admin" && <Link to="/accounts" className="account-list" >Account List</Link> }
 
+      { userName && (
       <div className="links">
-        <p className="welcome">{`Welcome, ${userName}`}</p>
+         <p className="welcome">{`Welcome, ${userName}`}</p>
 
         <Link to="/create" className="new-item">New Item</Link>
-        <Link className="sign-out">Sign Out</Link>
+        <button className="sign-out" onClick={handleSignOut}>Sign Out</button>
       </div>
+      )}
 
     </div>
   );

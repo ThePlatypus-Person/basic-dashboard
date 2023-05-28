@@ -3,6 +3,11 @@
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar {
   padding: 10px 20px;
   display: flex;
@@ -16,6 +21,10 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
+}
+
+.links a {
+  padding: 5px;
 }
 
 .navbar .logo {
@@ -65,14 +74,16 @@
   width: 150px;
 }
 
-.create {
+.create,
+.edit-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.create form {
+.create form,
+.edit-item form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,12 +93,26 @@
 }
 
 .create label,
-.create button {
+.create button,
+.edit-item label,
+.edit-item button {
   align-self: flex-start;
 }
 
-.create input {
+.create input,
+.edit-item input {
   width: 300px;
   height: 40px;
   margin: 10px 0;
+}
+
+.item:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.links a:hover {
+  font-weight: bold;
+  color: white;
+  background-color: grey;
+  border-radius: 5px;
 }

@@ -13,12 +13,14 @@ const Table = ({ list, head }) => {
       </div>
 
       {list.map((item) => (
+        <Link to={`/items/${item.id}`}>
         <div className="item" key={item.id}>
           <div className="id">{ item.id }</div>
           <div className="name">{ item.name }</div>
           <div className="desc">{ item.description }</div>
           <div className="creator">{ item.creator }</div>
         </div>
+        </Link>
       ))}
 
     </div>

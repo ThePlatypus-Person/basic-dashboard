@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Table",
+      "description": "Bob's table",
+      "creator": "Bob"
+    },
+    {
+      "id": 2,
+      "name": "Chair",
+      "description": "Bob's chair",
+      "creator": "Bob"
+    },
+    {
+      "id": 4,
+      "name": "Book",
+      "description": "Admin's book",
+      "creator": "Admin"
+    },
+    {
+      "id": 5,
+      "name": "Laptop",
+      "description": "Admin's laptop",
+      "creator": "Admin"
+    },
+    {
+      "name": "3 kg of Meth",
+      "description": "Blue, 98% purity",
+      "creator": "Walter White",
+      "id": 6
+    },
+    {
+      "name": "The Big Black Destroyer",
+      "description": "The largest dildo to ever exist",
+      "creator": "Big Chungus",
+      "id": 7
+    },
+    {
+      "name": "Admin's mom",
+      "description": "She could barely fit inside the database",
+      "creator": "Bob",
+      "id": 8
+    },
+    {
+      "name": "Chocolate",
+      "description": "This is, in fact, not a chocolate",
+      "creator": "Kevin",
+      "id": 9
+    }
+  ],
+  "accounts": [
+    {
+      "id": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "Bob",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "Shrek",
+      "password": "iamgroot",
+      "role": "user"
+    }
+  ]
+}

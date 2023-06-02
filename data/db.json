@@ -41,28 +41,22 @@
       "description": "She could barely fit inside the database",
       "creator": "Bob",
       "id": 8
-    },
-    {
-      "name": "Chocolate",
-      "description": "This is, in fact, not a chocolate",
-      "creator": "Kevin",
-      "id": 9
     }
   ],
   "accounts": [
     {
       "id": "admin",
-      "password": "123",
+      "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
       "role": "admin"
     },
     {
-      "id": "Bob",
-      "password": "123",
+      "id": "Shrek",
+      "hash": "a3b4b031a68d3de6fd509e78dc7266066cb964394e2583aea0dfb376581612e9",
       "role": "user"
     },
     {
-      "id": "Shrek",
-      "password": "iamgroot",
+      "id": "MyAcc",
+      "hash": "a3b4b031a68d3de6fd509e78dc7266066cb964394e2583aea0dfb376581612e9",
       "role": "user"
     }
   ]

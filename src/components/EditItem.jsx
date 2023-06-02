@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch.js";
+import useFetch from "../hooks/useFetch.jsx";
 
 const EditItem = () => {
   const { id } = useParams();

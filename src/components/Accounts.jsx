@@ -1,14 +1,21 @@
 import { useState, useEffect } from "react";
 import Table from "./Table.jsx";
-import useFetch from "../hooks/useFetch.js";
+import useFetch from "../hooks/useFetch.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Accounts = () => {
   const { data, isPending, error } = useFetch("http://localhost:3001/accounts");
   const [head, setHead] = useState(["Username", "Role"]);
   const [userName, setUserName] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setUserName(sessionStorage.getItem("userName"));
+    setUserName(sessionStorage.getItem("userName"))
+
+    if (sessionStorage.getItem("userName") !== "admin") {
+      navigate("/");
+    }
+
   }, [sessionStorage.getItem("userName")]);
 
   return (

@@ -32,6 +32,13 @@ const Navbar = () => {
       </div>
       )}
 
+      { !userName && (
+        <div className="non-login-links">
+          <Link to="/login" className="login">Login</Link>
+          <Link to="/register" className="register">Register</Link>
+        </div>
+      )}
+
     </div>
   );
 }

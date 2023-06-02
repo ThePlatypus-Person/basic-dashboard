@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useFetch from "../hooks/useFetch.js";
+import useFetch from "../hooks/useFetch.jsx";
 import Table from "./Table.jsx";
 
 const Main = () => {

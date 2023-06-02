@@ -23,6 +23,7 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/items/:id" element={<EditItem />} />
             <Route path="/accounts" element={<Accounts />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </div>
       </Router>

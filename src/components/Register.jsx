@@ -1,38 +1,71 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [id, setId] = useState('');
+  const [idTaken, setIdTaken] = useState(false);
   const [password, setPassword] = useState('');
+  const [hash, setHash] = useState(null);
   const [checkPass, setCheckPass] = useState('');
   const [role, setRole] = useState("user");
   const navigate = useNavigate();
 
-  const verifyPassword = () => {
-    if (password !== checkPass) {
-      alert("Password does not match.");
+  useEffect(() => {
+    fetch(`http://localhost:3001/accounts/${id}`)
+      .then(res => {
+        if (res.ok) {
+          setIdTaken(true);
+        } else {
+          setIdTaken(false);
+        }
+      });
+  }, [id]);
+
+  const getHash = async (input) => {
+    const textAsBuffer = new TextEncoder().encode(input);
+    const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hash = hashArray
+      .map((item) => item.toString(16).padStart(2, "0"))
+      .join("");
+
+    return hash;
+  }
+
+  const verify = () => {
+    if (idTaken) {
+      alert("Username taken.");
       return false;
     }
 
-    return true;
+    if (password === checkPass) {
+      return true;
+    }
+
+    alert("Password does not match.");
+    return false;
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (verifyPassword) {
-      const account = { id, password, role };
+    if (verify()) {
+      getHash(password).then(hash => setHash(hash));
 
-      fetch("http://localhost:3001/accounts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(account)
-      }).then(() => {
-        alert("Account Registered Successfully.");
-        navigate("/login");
-      }).catch(err => {
-        console.log("Error: " + err.message);
-      });
+      if (hash !== null) {
+        const account = { id, hash, role };
+
+        fetch("http://localhost:3001/accounts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(account)
+        }).then(() => {
+          alert("Account Registered Successfully.");
+          navigate("/login");
+        }).catch(err => {
+          console.log("Error: " + err.message);
+        });
+      }
     }
   }
 

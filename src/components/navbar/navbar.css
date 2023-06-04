@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  padding: 5px 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-family: TsukimiRounded;
+  font-size: 30px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar .logo img {
+  height: auto;
+  width: 50px;
+}
+
+.navbar .links,
+.navbar .links .logged-in,
+.navbar .links .logged-out {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.navbar .new-item-btn,
+.navbar .accounts-btn,
+.navbar .login-btn,
+.navbar .sign-out-btn,
+.navbar .register-btn {
+  background-color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid var(--text-color);
+  border-radius: 20px;
+}
+
+.navbar .login-btn:hover,
+.navbar .new-item-btn:hover {
+  background-color: var(--yellow);
+}
+
+.navbar .register-btn:hover,
+.navbar .accounts-btn:hover {
+  background-color: var(--orange);
+}
+
+.navbar .sign-out-btn:hover {
+  background-color: var(--dark-orange);
+}

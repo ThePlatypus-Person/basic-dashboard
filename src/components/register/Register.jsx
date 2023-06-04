@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./register.css";
 
 const Register = () => {
   const [id, setId] = useState('');
@@ -20,6 +21,13 @@ const Register = () => {
         }
       });
   }, [id]);
+
+  useEffect(() => {
+    if (sessionStorage.length != 0) {
+      navigate("/main");
+    }
+  });
+
 
   const getHash = async (input) => {
     const textAsBuffer = new TextEncoder().encode(input);
@@ -71,23 +79,25 @@ const Register = () => {
 
   return (
     <div className="register">
-      <h2>Register Account</h2>
+      <div className="register-form rotate-in-2-cw">
+        <h2>Register Account</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label>Username:</label>
-        <input type="text" required value={id}
-        onChange={(e) => setId(e.target.value)} />
+        <form onSubmit={handleSubmit}>
+          <label>Username:</label>
+          <input type="text" required value={id}
+          onChange={(e) => setId(e.target.value)} />
 
-        <label>Password:</label>
-        <input type="text" required value={password}
-          onChange={(e) => setPassword(e.target.value)} />
+          <label>Password:</label>
+          <input type="password" required value={password}
+            onChange={(e) => setPassword(e.target.value)} />
 
-        <label>Confirm Password:</label>
-        <input type="text" required value={checkPass}
-          onChange={(e) => setCheckPass(e.target.value)} />
+          <label>Confirm Password:</label>
+          <input type="password" required value={checkPass}
+            onChange={(e) => setCheckPass(e.target.value)} />
 
-        <button>Register</button>
-      </form>
+          <button className="register-btn">Register</button>
+        </form>
+      </div>
     </div>
   );
 

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
+import "./itemTable.css";
 
-const Table = ({ list, head }) => {
+const ItemTable = ({ list, head }) => {
 
   return (
-    <div className="table">
-      <p>List of items</p>
-      <div className="item head">
+    <div className="item-table">
+      <div className="head">
           <div className="id">{ head[0] }</div>
           <div className="name">{ head[1] }</div>
           <div className="desc">{ head[2] }</div>
@@ -27,4 +27,4 @@ const Table = ({ list, head }) => {
   );
 }
 
-export default Table;
+export default ItemTable;

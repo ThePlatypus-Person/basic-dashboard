@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./create.css"
 
 const Create = () => {
   const [name, setName] = useState('');
@@ -22,22 +23,23 @@ const Create = () => {
 
   return (
     <div className="create">
-      <h2>Add new Item</h2>
+      <div className="create-form">
+        <h2>Add new Item</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label>Item Name:</label>
-        <input type="text" required value={name}
-          onChange={(e) => setName(e.target.value)} />
+        <form onSubmit={handleSubmit}>
+          <label>Item Name:</label>
+          <input type="text" required value={name}
+            onChange={(e) => setName(e.target.value)} />
 
-        <label>Item Description:</label>
-        <input type="text" required value={description}
-          onChange={(e) => setDescription(e.target.value)} />
+          <label>Item Description:</label>
+          <input type="text" required value={description}
+            onChange={(e) => setDescription(e.target.value)} />
 
-        <label>Item Creator:</label>
-        <div className="creator">{ creator }</div>
+          <div className="creator">Item Creator: { creator }</div>
 
-        <button>Add new item</button>
-      </form>
+          <button className="create-btn">Add new item</button>
+        </form>
+      </div>
     </div>
   );
 }

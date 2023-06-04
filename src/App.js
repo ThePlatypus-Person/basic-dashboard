@@ -1,18 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Main from "./components/Main.jsx";
-import Create from "./components/Create.jsx";
-import EditItem from "./components/EditItem.jsx";
-import Register from "./components/Register.jsx";
-import Login from "./components/Login.jsx";
-import Home from "./components/Home.jsx";
-import Accounts from "./components/Accounts.jsx";
+import { Accounts, Create, EditItem, Home, Login, Main, Navbar, Register } from "./components";
 
 function App() {
   return (
       <Router>
-        <div className="App">
+        <div className="app">
           <Navbar />
 
           <Routes>

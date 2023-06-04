@@ -7,12 +7,6 @@
       "creator": "Bob"
     },
     {
-      "id": 2,
-      "name": "Chair",
-      "description": "Bob's chair",
-      "creator": "Bob"
-    },
-    {
       "id": 4,
       "name": "Book",
       "description": "Admin's book",
@@ -31,33 +25,33 @@
       "id": 6
     },
     {
-      "name": "The Big Black Destroyer",
-      "description": "The largest dildo to ever exist",
-      "creator": "Big Chungus",
-      "id": 7
-    },
-    {
       "name": "Admin's mom",
       "description": "She could barely fit inside the database",
       "creator": "Bob",
       "id": 8
+    },
+    {
+      "name": "Subject SM-046",
+      "description": "Urbach-wiethe disease patient",
+      "creator": "admin",
+      "id": 9
     }
   ],
   "accounts": [
-    {
-      "id": "admin",
-      "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-      "role": "admin"
-    },
     {
       "id": "Shrek",
       "hash": "a3b4b031a68d3de6fd509e78dc7266066cb964394e2583aea0dfb376581612e9",
       "role": "user"
     },
     {
-      "id": "MyAcc",
-      "hash": "a3b4b031a68d3de6fd509e78dc7266066cb964394e2583aea0dfb376581612e9",
+      "id": "Bob",
+      "hash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824",
       "role": "user"
+    },
+    {
+      "id": "admin",
+      "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "role": "admin"
     }
   ]
 }

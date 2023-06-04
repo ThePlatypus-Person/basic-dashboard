@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch.jsx";
+import useFetch from "../../hooks/useFetch.jsx";
+import "./editItem.css"
 
 const EditItem = () => {
   const { id } = useParams();
@@ -46,23 +47,26 @@ const EditItem = () => {
       { isPending ? <div>Fetching data...</div>
       : error ? <div>{ error }</div>
       : data && (
-        <div>
-          <h2>Edit Item</h2>
-          <form onSubmit={handleSave}>
-            <label>Item Name:</label>
-            <input type="text" required value={name}
-              onChange={(e) => setName(e.target.value)} />
+        <div className="edit-item">
+          <div className="edit-item-form">
+            <h2>Edit Item</h2>
+            <form onSubmit={handleSave}>
+              <label>Item Name:</label>
+              <input type="text" required value={name}
+                onChange={(e) => setName(e.target.value)} />
 
-            <label>Item Description:</label>
-            <input type="text" required value={description}
-              onChange={(e) => setDescription(e.target.value)} />
+              <label>Item Description:</label>
+              <input type="text" required value={description}
+                onChange={(e) => setDescription(e.target.value)} />
 
-            <label>Item Creator:</label>
-            <div className="creator">{ creator }</div>
+              <div className="creator">Item Creator: { creator }</div>
 
-            <button>Save</button>
-            <button onClick={handleDelete}>Delete Blog</button>
-          </form>
+              <div className="buttons">
+                <button className="save-btn">Save</button>
+                <button className="delete-btn" onClick={handleDelete}>Delete Blog</button>
+              </div>
+            </form>
+          </div>
         </div>
       ) }
 

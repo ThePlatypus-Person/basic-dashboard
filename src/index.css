@@ -1,118 +1,42 @@
-* {
-  margin: 0;
-  font-family: sans-serif;
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.navbar {
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid gray;
-}
-
-.navbar .links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 10px;
-}
-
-.links a {
-  padding: 5px;
-}
-
-.navbar .logo {
-  font-size: 30px;
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
   font-weight: bold;
-  font-family: Helvetica;
 }
 
-.table {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
 }
 
-.table p {
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 10px;
+@font-face {
+  font-family: TsukimiRounded;
+  src: url("./fonts/TsukimiRounded-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
 }
 
-.table .item {
-  display: flex;
-  border: 1px solid black;
-}
+:root {
+  --font-family: Roboto, sans-serif;
 
-.id, .name , .desc, .creator {
-  padding: 10px;
-}
+  --text-color: #0b1d18;
+  --bg-color: #e9f6f2;
+  --primary-color: #328169;
+  --secondary-color: #d7efe8;
+  --accent-color: #399378;
 
-.table .id {
-  width: 90px;
-}
-
-.table .name {
-  width: 100px;
-  text-align: left;
-}
-
-.table .desc {
-  width: 200px;
-  text-align: left;
-}
-
-.table .creator {
-  width: 150px;
-}
-
-.create,
-.edit-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.create form,
-.edit-item form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  padding: 10px;
-}
-
-.create label,
-.create button,
-.edit-item label,
-.edit-item button {
-  align-self: flex-start;
-}
-
-.create input,
-.edit-item input {
-  width: 300px;
-  height: 40px;
-  margin: 10px 0;
-}
-
-.item:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.links a:hover {
-  font-weight: bold;
-  color: white;
-  background-color: grey;
-  border-radius: 5px;
+  --yellow: #e9c46a;
+  --orange: #f4a261;
+  --dark-orange: #e76f51;
+  --red: #d90429;
 }

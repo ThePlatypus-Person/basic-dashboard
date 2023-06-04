@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import useFetch from "../hooks/useFetch.jsx";
-import Table from "./Table.jsx";
+import useFetch from "../../hooks/useFetch.jsx";
+import ItemTable from "../itemTable/ItemTable.jsx";
+import loading from "../../assets/loading.svg";
+import "./main.css";
 
 const Main = () => {
   const [userName, setUserName] = useState(null);
@@ -14,11 +16,11 @@ const Main = () => {
   return (
     <div className="main">
       {
-        isPending ? <div>Fetching data...</div>
-        : error ? <div>{ error }</div>
+        isPending ? <div className="loading">Fetching data...</div>
+        : error ? <div className="error">{ error }</div>
         : (userName === "admin") ?
-          data && <Table list={data} head={tableTitle} />
-        : data && <Table list={data.filter(item => item.creator == userName)}  head={tableTitle} />
+          data && <ItemTable list={data} head={tableTitle} />
+        : data && <ItemTable list={data.filter(item => item.creator == userName)}  head={tableTitle} />
       }
     </div>
   );

@@ -1,0 +1,63 @@
+.edit-item {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-item-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  background-color: var(--orange);
+  border: 3px solid var(--text-color);
+  border-radius: 30px;
+  padding: 20px 40px;
+  color: var(--bg-color);
+}
+
+.edit-item-form form {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+.edit-item-form form input {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  width: 300px;
+}
+
+.edit-item-form form .creator {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn,
+.delete-btn {
+  background-color: white;
+  border: 2px solid var(--text-color);
+  border-radius: 20px;
+  align-self: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.save-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.delete-btn:hover {
+  background-color: var(--red);
+  color: var(--bg-color);
+}

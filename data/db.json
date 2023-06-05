@@ -13,10 +13,10 @@
       "creator": "Admin"
     },
     {
-      "id": 5,
       "name": "Laptop",
       "description": "Admin's laptop",
-      "creator": "Admin"
+      "creator": "Admin",
+      "id": 5
     },
     {
       "name": "3 kg of Meth",
@@ -35,6 +35,18 @@
       "description": "Urbach-wiethe disease patient",
       "creator": "admin",
       "id": 9
+    },
+    {
+      "name": "Salt",
+      "description": "Cocaine disguised as salt",
+      "creator": "Shrek",
+      "id": 10
+    },
+    {
+      "name": "My Little Pony in a Jar",
+      "description": "Cursed object. Keep your distance.",
+      "creator": "Shrek",
+      "id": 11
     }
   ],
   "accounts": [

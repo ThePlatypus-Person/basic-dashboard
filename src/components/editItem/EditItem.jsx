@@ -43,7 +43,7 @@ const EditItem = () => {
   }
 
   return (
-    <div className="edit-item">
+    <div className="edit-item rotate-in-2-cw">
       { isPending ? <div>Fetching data...</div>
       : error ? <div>{ error }</div>
       : data && (

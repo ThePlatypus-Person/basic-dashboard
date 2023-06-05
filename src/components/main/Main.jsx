@@ -14,7 +14,7 @@ const Main = () => {
   }, [sessionStorage.getItem("userName")]);
 
   return (
-    <div className="main">
+    <div className="main fade-in">
       {
         isPending ? <div className="loading">Fetching data...</div>
         : error ? <div className="error">{ error }</div>

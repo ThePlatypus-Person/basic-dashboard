@@ -22,7 +22,7 @@ const Create = () => {
   }
 
   return (
-    <div className="create">
+    <div className="create rotate-in-2-cw">
       <div className="create-form">
         <h2>Add new Item</h2>
 

@@ -28,7 +28,7 @@ const Accounts = () => {
   }
 
   return (
-    <div className="accounts">
+    <div className="accounts fade-in">
       {
         isPending ? <div>Fetching data...</div>
         : error ? <div>{ error }</div>
